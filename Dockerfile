@@ -10,5 +10,5 @@ RUN apk update && apk upgrade && \
 
 EXPOSE 1812/udp 1813/udp 
 
-CMD ["radiusd", "-X"]
+CMD ["radiusd", "-sfxx -l stdout"]
 # CMD ["radiusd", "-xx", "-f", "-l", "stdout"]
