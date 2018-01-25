@@ -19,6 +19,6 @@ DEFAULT
   Operator-Name =* ANY,
   Calling-Station-Id =* ANY,
   Called-Station-Id =* ANY,
-  Country =* ANY,
+  Eduroam-SP-Country =* ANY,
   Chargeable-User-Identity =* ANY,
   Proxy-State =* ANY
