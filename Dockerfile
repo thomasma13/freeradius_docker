@@ -1,6 +1,6 @@
 FROM alpine:3.7
 
-MAINTAINER Chris Rohrer <chris.rohrer@ubuntunet.net>
+LABEL maintainer="chris.rohrer@ubuntunet.net"
 
 WORKDIR /radius
 
