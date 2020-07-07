@@ -10,7 +10,7 @@ RUN apk update && apk upgrade && \
 
 VOLUME ["/config"]
 
-RUN cp /config/clients.conf /etc/raddb/clients1.conf 2>/dev/null || :
+RUN cp /config/* /etc/raddb/clients1.conf
 
 EXPOSE 1812/udp 1813/udp
 
