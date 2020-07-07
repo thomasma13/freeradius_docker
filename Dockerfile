@@ -8,6 +8,10 @@ RUN apk update && apk upgrade && \
     apk add --update freeradius freeradius-radclient && \
     rm /var/cache/apk/*
 
+VOLUME ["/config"]
+
+RUN cp /config/clients.conf /etc/raddb/clients1.conf
+
 EXPOSE 1812/udp 1813/udp
 
 CMD ["radiusd", "-sfl", "stdout"]
