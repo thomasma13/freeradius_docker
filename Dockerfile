@@ -12,4 +12,4 @@ VOLUME ["/config"]
 
 EXPOSE 1812/udp 1813/udp
 
-CMD ["radiusd", "-sfl -d /config", "stdout"]
+CMD ["radiusd", "-d", "/config", "-sfl", "stdout"]
