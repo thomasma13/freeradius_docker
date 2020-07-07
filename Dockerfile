@@ -10,6 +10,8 @@ RUN apk update && apk upgrade && \
 
 VOLUME ["/config"]
 
+RUN chmod 0640 /config/
+
 EXPOSE 1812/udp 1813/udp
 
 CMD ["radiusd", "-d", "/config", "-sfl", "stdout"]
