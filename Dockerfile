@@ -10,9 +10,10 @@ RUN apk update && apk upgrade && \
 
 VOLUME ["/config"]
 
-CMD "chmod 0640 /config"
-CMD "chmod 0640 /config/*"
+RUN mkdir /runningconfig
+
+CMD "cp /config/* /runningconfig/"
 
 EXPOSE 1812/udp 1813/udp
 
-CMD ["radiusd", "-d", "/config", "-sfl", "stdout"]
+CMD ["radiusd", "-d", "/runningconfig", "-sfl", "stdout"]
