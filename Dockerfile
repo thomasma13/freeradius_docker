@@ -10,7 +10,7 @@ RUN apk update && apk upgrade && \
 
 VOLUME ["/config"]
 
-RUN cp /config/* /etc/raddb/clients1.conf
+RUN cp /config/* /etc/raddb/
 
 EXPOSE 1812/udp 1813/udp
 
