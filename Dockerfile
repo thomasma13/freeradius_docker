@@ -10,8 +10,6 @@ RUN apk update && apk upgrade && \
 
 VOLUME ["/config"]
 
-RUN cp /etc/raddb/* /config/
-
 EXPOSE 1812/udp 1813/udp
 
 CMD ["radiusd", "-sfl -d /config", "stdout"]
