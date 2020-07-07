@@ -11,6 +11,7 @@ RUN apk update && apk upgrade && \
 VOLUME ["/config"]
 
 CMD "chmod 0640 /config"
+CMD "chmod 0640 /config/*"
 
 EXPOSE 1812/udp 1813/udp
 
