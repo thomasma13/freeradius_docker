@@ -6,7 +6,7 @@ RUN apk update && apk upgrade && \
     apk add --update freeradius freeradius-radclient && \
     rm /var/cache/apk/*
 
-RUN apt-get install -y curl
+RUN apk add curl
 
 VOLUME ["/config"]
 
