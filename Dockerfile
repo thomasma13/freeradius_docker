@@ -12,8 +12,10 @@ VOLUME ["/config"]
 
 RUN mkdir /runningconfig
 
-CMD "cp /config/* /runningconfig/"
+RUN curl https://raw.githubusercontent.com/thomasma13/freeradius_docker/master/run.sh --output /run.sh
+
+RUN chmod -x /run.sh
 
 EXPOSE 1812/udp 1813/udp
 
-CMD ["radiusd", "-d", "/runningconfig", "-sfl", "stdout"]
+CMD ["/run.sh"]
