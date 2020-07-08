@@ -14,7 +14,7 @@ RUN mkdir /runningconfig
 
 RUN curl https://raw.githubusercontent.com/thomasma13/freeradius_docker/master/run.sh --output /run.sh
 
-RUN chmod -x /run.sh
+RUN chmod +x /run.sh
 
 EXPOSE 1812/udp 1813/udp
 
