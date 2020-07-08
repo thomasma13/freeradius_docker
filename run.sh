@@ -2,4 +2,4 @@
 
 cp /config/* /runningconfig/
 
-radiusd -d /runningconfig -sfl stdout
+radiusd -x -d /runningconfig -sfl stdout
