@@ -1,11 +1,10 @@
 FROM alpine:3.9
 
-LABEL maintainer="chris.rohrer@ubuntunet.net"
-
 WORKDIR /radius
 
 RUN apk update && apk upgrade && \
     apk add --update freeradius freeradius-radclient && \
+    apt-get install -y && \
     rm /var/cache/apk/*
 
 VOLUME ["/config"]
