@@ -4,8 +4,9 @@ WORKDIR /radius
 
 RUN apk update && apk upgrade && \
     apk add --update freeradius freeradius-radclient && \
-    apt-get install -y && \
     rm /var/cache/apk/*
+
+RUN apt-get install -y curl
 
 VOLUME ["/config"]
 
